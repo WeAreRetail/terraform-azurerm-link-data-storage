@@ -27,3 +27,31 @@ module "data_storages_lookup" {
 #### Outputs
 
 No outputs.
+
+<!-- BEGIN_TF_DOCS -->
+#### Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.59.0 |
+
+#### Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_project"></a> [project](#input\_project) | Project trigram to query/create the storage private endpoints upon | `string` | n/a | yes |
+| <a name="input_read_env"></a> [read\_env](#input\_read\_env) | Read environment on which the private endpoint/data source should be pointing to | `string` | n/a | yes |
+| <a name="input_write_env"></a> [write\_env](#input\_write\_env) | Write environment on which the private endpoint/data source should be pointing to | `string` | n/a | yes |
+| <a name="input_custom_tags_read_env"></a> [custom\_tags\_read\_env](#input\_custom\_tags\_read\_env) | n/a | `map(string)` | `{}` | no |
+| <a name="input_custom_tags_write_env"></a> [custom\_tags\_write\_env](#input\_custom\_tags\_write\_env) | n/a | `map(string)` | `{}` | no |
+| <a name="input_disaster_recovery"></a> [disaster\_recovery](#input\_disaster\_recovery) | Whether to query/create private endpoints on the disaster recovery environment | `bool` | `false` | no |
+
+#### Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_read_storage_name"></a> [read\_storage\_name](#output\_read\_storage\_name) | n/a |
+| <a name="output_storages"></a> [storages](#output\_storages) | n/a |
+| <a name="output_write_storage_name"></a> [write\_storage\_name](#output\_write\_storage\_name) | n/a |
+<!-- END_TF_DOCS -->
