@@ -51,7 +51,9 @@ No outputs.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_read_storage_id"></a> [read\_storage\_id](#output\_read\_storage\_id) | n/a |
 | <a name="output_read_storage_name"></a> [read\_storage\_name](#output\_read\_storage\_name) | n/a |
 | <a name="output_storages"></a> [storages](#output\_storages) | n/a |
+| <a name="output_write_storage_id"></a> [write\_storage\_id](#output\_write\_storage\_id) | n/a |
 | <a name="output_write_storage_name"></a> [write\_storage\_name](#output\_write\_storage\_name) | n/a |
 <!-- END_TF_DOCS -->
