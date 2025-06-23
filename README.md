@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD024 MD025 MD001 MD033 -->
 # Azure Aware Link Data Storage
 
 [![Build Status](https://dev.azure.com/weareretail/Tooling/_apis/build/status/mod_azu_databricks_data?repoName=mod_azu_link_data_storage&branchName=master)](https://dev.azure.com/weareretail/Tooling/_build/latest?definitionId=11&repoName=mod_azu_link_data_storage&branchName=master)[![Unilicence](https://img.shields.io/badge/licence-The%20Unilicence-green)](LICENCE)
@@ -40,20 +41,23 @@ No outputs.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_project"></a> [project](#input\_project) | Project trigram to query/create the storage private endpoints upon | `string` | n/a | yes |
-| <a name="input_read_env"></a> [read\_env](#input\_read\_env) | Read environment on which the private endpoint/data source should be pointing to | `string` | n/a | yes |
-| <a name="input_write_env"></a> [write\_env](#input\_write\_env) | Write environment on which the private endpoint/data source should be pointing to | `string` | n/a | yes |
-| <a name="input_custom_tags_read_env"></a> [custom\_tags\_read\_env](#input\_custom\_tags\_read\_env) | n/a | `map(string)` | `{}` | no |
-| <a name="input_custom_tags_write_env"></a> [custom\_tags\_write\_env](#input\_custom\_tags\_write\_env) | n/a | `map(string)` | `{}` | no |
-| <a name="input_disaster_recovery"></a> [disaster\_recovery](#input\_disaster\_recovery) | Whether to query/create private endpoints on the disaster recovery environment | `bool` | `false` | no |
+| <a name="input_project"></a> [project](#input\_project) | Project trigram to query the storage. | `string` | n/a | yes |
+| <a name="input_read_env"></a> [read\_env](#input\_read\_env) | Read environment on which the data source should be pointing to. | `string` | n/a | yes |
+| <a name="input_write_env"></a> [write\_env](#input\_write\_env) | Write environment on which the data source should be pointing to. | `string` | n/a | yes |
+| <a name="input_custom_tags_read_env"></a> [custom\_tags\_read\_env](#input\_custom\_tags\_read\_env) | Custom tags to be matched for the read environment storage accounts. | `map(string)` | `{}` | no |
+| <a name="input_custom_tags_write_env"></a> [custom\_tags\_write\_env](#input\_custom\_tags\_write\_env) | Custom tags to be matched for the write environment storage accounts. | `map(string)` | `{}` | no |
+| <a name="input_disaster_recovery"></a> [disaster\_recovery](#input\_disaster\_recovery) | Whether to query on the disaster recovery environment. | `bool` | `false` | no |
 
 #### Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_read_storage_id"></a> [read\_storage\_id](#output\_read\_storage\_id) | n/a |
-| <a name="output_read_storage_name"></a> [read\_storage\_name](#output\_read\_storage\_name) | n/a |
-| <a name="output_storages"></a> [storages](#output\_storages) | n/a |
-| <a name="output_write_storage_id"></a> [write\_storage\_id](#output\_write\_storage\_id) | n/a |
-| <a name="output_write_storage_name"></a> [write\_storage\_name](#output\_write\_storage\_name) | n/a |
+| <a name="output_read_storage_id"></a> [read\_storage\_id](#output\_read\_storage\_id) | The ID of the read storage account |
+| <a name="output_read_storage_name"></a> [read\_storage\_name](#output\_read\_storage\_name) | The name of the read storage account |
+| <a name="output_read_storage_resource_group_name"></a> [read\_storage\_resource\_group\_name](#output\_read\_storage\_resource\_group\_name) | The resource group name of the read storage account |
+| <a name="output_storages"></a> [storages](#output\_storages) | Map of all storage accounts, including read and write. The key is the index of the storage in the list, and the value is the storage account object. |
+| <a name="output_storages_map"></a> [storages\_map](#output\_storages\_map) | Map of all storage accounts, including read and write. The key is the name of the storage account, and the value is the storage account object. |
+| <a name="output_write_storage_id"></a> [write\_storage\_id](#output\_write\_storage\_id) | The ID of the write storage account |
+| <a name="output_write_storage_name"></a> [write\_storage\_name](#output\_write\_storage\_name) | The name of the write storage account |
+| <a name="output_write_storage_resource_group_name"></a> [write\_storage\_resource\_group\_name](#output\_write\_storage\_resource\_group\_name) | The resource group name of the write storage account |
 <!-- END_TF_DOCS -->
