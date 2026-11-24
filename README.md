@@ -33,14 +33,14 @@ No outputs.
 #### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.59.0 |
 
 #### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_project"></a> [project](#input\_project) | Project trigram to query the storage. | `string` | n/a | yes |
 | <a name="input_read_env"></a> [read\_env](#input\_read\_env) | Read environment on which the data source should be pointing to. | `string` | n/a | yes |
 | <a name="input_write_env"></a> [write\_env](#input\_write\_env) | Write environment on which the data source should be pointing to. | `string` | n/a | yes |
@@ -51,7 +51,7 @@ No outputs.
 #### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_read_storage_id"></a> [read\_storage\_id](#output\_read\_storage\_id) | The ID of the read storage account |
 | <a name="output_read_storage_name"></a> [read\_storage\_name](#output\_read\_storage\_name) | The name of the read storage account |
 | <a name="output_read_storage_resource_group_name"></a> [read\_storage\_resource\_group\_name](#output\_read\_storage\_resource\_group\_name) | The resource group name of the read storage account |
